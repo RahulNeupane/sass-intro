@@ -257,3 +257,17 @@ $animation-speed: .3s !default;
 	font-size: $pxSize;
 	font-size: ($pxSize / 10px) + rem;
 }
+
+
+
+@mixin flex($wrap,$align,$halign) {
+	display: flex;
+	flex-wrap: $wrap;
+	align-items: $align;
+	justify-content: $halign;
+}
+
+@mixin align-vertical($alingment){
+	display: inline-block;
+	vertical-align: $alingment;
+}

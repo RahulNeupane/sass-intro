@@ -1,4 +1,3 @@
-
 .banner-part{
     width: 100vw;
     position: relative;
@@ -98,10 +97,7 @@
         .product-image{
             height: 400px;
             position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+            @include flex(wrap,center,center)
         }
 
         &:nth-child(2){
@@ -127,9 +123,8 @@
         line-height: 1.57;
 
         .product-code{
+            @include size(62px);
             background-color: #000;
-            width: 62px;
-            height: 62px;
             border-radius: 50%;
             font-size: 25px;
             border: 2px solid #b03d42;
@@ -158,6 +153,84 @@
     //     }
     // }
     
+}
+
+
+.process-part{
+    background-color: $dark-black;
+    text-align: center;
+    color: $white;
+    padding: 100px 0;
+
+    .container{
+        max-width: 1007px;
+    }
+
+
+    h2{
+        color: $white;
+    }
+
+    .heading-wrap{
+        max-width: 940px;
+        margin: 0 auto 85px;
+    }
+
+    .icon-wrap{
+        border: 1px solid $white;
+        border-radius: 9px;
+        height: 140px;
+        @include flex(wrap,center,center);  //mixin used
+        margin-bottom: 22px;
+    }
+
+    .process-text{
+        @include align-vertical(top);  //mixin used
+        font-size: 20px;
+    }
+
+    .four-columns{
+        margin: 0 -31px 80px;
+        .col{
+            padding: 0 31px;
+        }
+    }
+
+    .btn{
+        text-transform: capitalize;
+    }
+}
+
+.feedback-part{
+    text-align: center;
+    padding: 100px 0;
+    .feedback-img{
+        @include size(158px);
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 2px solid $red;
+        overflow: hidden;
+    }
+
+    // img{
+    //     object-fit: cover;
+    //     height: 100%;
+    //     width: auto;
+    // }
+
+    .cite{
+        font-size: 19px;
+        line-height: 1.57;
+        text-transform: capitalize;
+        display: block;
+        font-style: normal;
+    }
+
+    q{
+        quotes: none;
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
 
