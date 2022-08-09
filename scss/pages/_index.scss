@@ -232,21 +232,29 @@
         vertical-align: top;
     }
 
-    // .feedback-content{
-    //     display: flex;
-    // }
+    .slick-arrow{
+        font-size: 52px;
+        color: $red;
+        position:absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        &.slick-next{
+            right: 0;
+        }
+        &.slick-prev{
+            left: 0;
+        }
+        i{
+            @include animate(color,0.35s,linear)
+        }
 
-    // a{
-    //     position: relative;
-    //     text-decoration: none;
-    //     top: 75px;
-    //     font-size: 53px;
-    //     color: $red;
-    // }
-
-    i{
-        color: #6b6b6b;
-        padding: 20px;
+        
+        &:hover{
+            i{
+                color:darken($color: $red, $amount: 10%); 
+            }
+        }
     }
 }
 
