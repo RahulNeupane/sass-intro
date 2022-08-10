@@ -15,10 +15,13 @@ h6, .h6,
 }
 
 h1, .h1 {
-	font-size: $h1-font-size-sm;
-	margin-bottom: 45px;
+	font-size: 42px;
+	margin-bottom: 20px;
 	@include media('>=widescreen') {
 		font-size: $h1-font-size;		
+	}
+	@include media('>=tablet') {
+		font-size: 50px;		
 	}
 }
 

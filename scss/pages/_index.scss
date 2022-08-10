@@ -59,8 +59,10 @@
 
 
 .about-part{
-    padding: 120px 0;
-
+    padding: 50px 0;
+    @include media('>=desktop'){
+        padding: 120px 0;
+    }
     p{
         margin: 0;
     }
@@ -75,6 +77,20 @@
         margin-top: 60px;
     }
     
+    .two-columns{
+        .small-col{
+            order: 0;
+            @include media(">=tablet"){
+                order: 1;
+            }
+        }
+        .large-col{
+            order: 1;
+            @include media(">=tablet"){
+                order: 0;
+            }
+        }
+    }
 }
 
 .products-part{
