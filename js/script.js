@@ -29,3 +29,16 @@ $('.feedback-slider').slick({
       // instead of a settings object
     ]
   });
+
+
+  $('.banner-slider').slick({
+    dots: false,
+    infinite: false,
+    speed: 1000,
+    mobileFirst:false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows:false,
+    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon-prev"></i></button>',
+    nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon-next"></i></button>',
+  });
