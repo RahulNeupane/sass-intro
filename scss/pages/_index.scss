@@ -1,35 +1,38 @@
 .banner-part{
 
     .banner-slider{
-        padding: 65px 0;
+        // padding: 65px 0;
         position: relative;
         display: flex;
         height: 100vh;
-
         // &:before{
         //     content: '';
         //     display: block;
         //     height: 100vh;
         // }
         .slick-track{
+            height: 100%;
             display: flex !important;
         }
 
         .slick-slide{
+            position:relative;
             height: auto;
+            @include flex(wrap,center,center);
         }
 
-
-        &:after{
-            content:'';
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background-color: #bf3d42;
-            mix-blend-mode: darken;
-            pointer-events: none;
+        .bg-strech{
+            &:after{
+                content:'';
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background-color: #bf3d42;
+                mix-blend-mode: darken;
+                pointer-events: none;
+            }
         }
     }
 
@@ -275,3 +278,38 @@
 }
 
 
+.slick-dots{
+    @extend %listreset;
+    position: absolute;
+    bottom: 72px;
+    display: flex;
+    left: 0;
+    right: 0;
+    @include flex(wrap,center,center);
+    li{
+        padding: 0 2px 0 3px;
+
+        &.slick-active{
+
+            button{
+                background-color: transparent;
+                @include size(26px);
+            }
+        }
+    }
+
+    button{
+        padding: 0;
+        display: block;
+        @include hide-text;
+        background-color: #f9f9fb;
+        border-radius: 50%;
+        @include size (18px);
+        border: 3px solid #f9f9fb;
+        @include animate(all, 0.35s,ease);
+        &:hover{
+            background-color: transparent;
+            @include size(26px);
+        }
+    }
+}

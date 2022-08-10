@@ -32,7 +32,7 @@ $('.feedback-slider').slick({
 
 
   $('.banner-slider').slick({
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 1000,
     mobileFirst:false,
@@ -42,3 +42,10 @@ $('.feedback-slider').slick({
     prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon-prev"></i></button>',
     nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon-next"></i></button>',
   });
+
+var opener = jQuery('.nav-opener');
+if(opener){
+  opener.on('click',function(){
+    jQuery('body').toggleClass('nav-active')
+  })
+}
